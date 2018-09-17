@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<block>
+  <name>Detect Telemetry Frame</name>
+  <key>handiko_frame_detect</key>
+  <category>[handiko]</category>
+  <import>import handiko</import>
+  <make>handiko.frame_detect()</make>
+  
+
+  <!-- Make one 'sink' node per input. Sub-nodes:
+       * name (an identifier for the GUI)
+       * type
+       * vlen
+       * optional (set to 1 for optional inputs) -->
+  <sink>
+    <name>bitstream</name>
+    <type>byte</type>
+  </sink>
+  
+  <source>
+    <name>frame out</name>
+    <type>message</type>
+    <optional>True</optional>
+  </source>
+  
+</block>
